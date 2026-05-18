@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>组织与干部管理知识库｜活泼清新风首页</title>
+  <style>
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: "Microsoft YaHei", "PingFang SC", "Noto Sans CJK SC", Arial, sans-serif;
+      background: #e9eef5;
+      color: #1f2937;
+      line-height: 1.7;
+    }
+    .style-note {
+      width: 1180px;
+      max-width: calc(100% - 40px);
+      margin: 42px auto 12px;
+      font-size: 15px;
+      color: #44566c;
+      letter-spacing: .5px;
+      font-weight: 700;
+    }
+    .page {
+      width: 1180px;
+      max-width: calc(100% - 40px);
+      min-height: 760px;
+      margin: 0 auto 72px;
+      overflow: hidden;
+    }
+    h1, h2, h3, p { margin-top: 0; }
+
+    /* =========================================================
+       风格一：活泼清新风
+       关键词：轻快、亲和、明亮、多色卡片、低压力
+       适合：希望 HRBP 愿意打开、愿意用，减少“制度库”的压迫感
+    ========================================================= */
+    .playful {
+      position: relative;
+      border-radius: 38px;
+      background:
+        radial-gradient(circle at 10% 10%, rgba(67, 170, 255, .22), transparent 26%),
+        radial-gradient(circle at 86% 12%, rgba(126, 231, 135, .22), transparent 28%),
+        radial-gradient(circle at 72% 88%, rgba(255, 197, 92, .22), transparent 26%),
+        linear-gradient(180deg, #ffffff 0%, #f1f9ff 100%);
+      box-shadow: 0 26px 64px rgba(62, 105, 150, .16);
+      border: 1px solid #d7eafa;
+    }
+    .playful::before {
+      content: "";
+      position: absolute;
+      width: 180px;
+      height: 180px;
+      border-radius: 42px;
+      right: -70px;
+      top: 90px;
+      background: rgba(67, 170, 255, .12);
+      transform: rotate(18deg);
+    }
+    .playful-inner {
+      position: relative;
+      z-index: 1;
+      padding: 46px 52px 52px;
+    }
+    .playful-hero {
+      display: grid;
+      grid-template-columns: 1.08fr .92fr;
+      gap: 34px;
+      align-items: center;
+      margin-bottom: 30px;
+    }
+    .playful-label {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 8px 16px;
+      border-radius: 999px;
+      background: #ffffff;
+      border: 1px solid #d7eafa;
+      color: #1f5fa8;
+      box-shadow: 0 10px 24px rgba(62, 105, 150, .08);
+      font-size: 14px;
+    }
+    .playful-label::before { content: "✦"; color: #26a7ff; }
+    .playful h1 {
+      margin: 20px 0 14px;
+      color: #12315f;
+      font-size: 42px;
+      line-height: 1.18;
+    }
+    .playful-lead {
+      margin: 0;
+      color: #4c6178;
+      font-size: 17px;
+      max-width: 700px;
+    }
+    .playful-window {
+      padding: 18px;
+      border-radius: 30px;
+      background: rgba(255,255,255,.86);
+      border: 1px solid #d7eafa;
+      box-shadow: 0 18px 42px rgba(62, 105, 150, .11);
+    }
+    .window-bar { display: flex; gap: 7px; margin-bottom: 14px; }
+    .window-bar span { width: 11px; height: 11px; border-radius: 50%; display: block; }
+    .window-bar span:nth-child(1) { background: #ff7d7d; }
+    .window-bar span:nth-child(2) { background: #ffc85a; }
+    .window-bar span:nth-child(3) { background: #5bd681; }
+    .playful-window strong { display: block; color: #12315f; font-size: 20px; margin-bottom: 10px; }
+    .playful-search {
+      height: 46px;
+      display: flex;
+      align-items: center;
+      padding: 0 16px;
+      border-radius: 16px;
+      background: #f3f8ff;
+      color: #667085;
+      margin: 12px 0;
+    }
+    .playful-tags { display: flex; flex-wrap: wrap; gap: 8px; }
+    .playful-tags span {
+      padding: 6px 10px;
+      border-radius: 999px;
+      background: #eaf5ff;
+      color: #1f5fa8;
+      font-size: 12px;
+    }
+    .playful-intro {
+      padding: 24px 26px;
+      border-radius: 28px;
+      background: #fff;
+      border: 1px solid #d7eafa;
+      color: #40566f;
+      box-shadow: 0 12px 28px rgba(62, 105, 150, .08);
+      margin-bottom: 24px;
+    }
+    .playful-title {
+      margin: 30px 0 16px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      color: #12315f;
+      font-size: 22px;
+    }
+    .playful-title::before {
+      content: "";
+      width: 12px;
+      height: 12px;
+      border-radius: 50%;
+      background: #26a7ff;
+      box-shadow: 0 0 0 8px #e4f4ff;
+    }
+    .playful-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 16px;
+    }
+    .playful-card {
+      min-height: 150px;
+      padding: 22px;
+      border-radius: 28px;
+      background: #fff;
+      border: 1px solid #d7eafa;
+      box-shadow: 0 10px 26px rgba(62, 105, 150, .08);
+    }
+    .playful-card:nth-child(1) { border-top: 6px solid #2f7edb; }
+    .playful-card:nth-child(2) { border-top: 6px solid #39c16c; }
+    .playful-card:nth-child(3) { border-top: 6px solid #ffb84d; }
+    .playful-card:nth-child(4) { border-top: 6px solid #8b6cff; }
+    .playful-card:nth-child(5) { border-top: 6px solid #35b8c9; }
+    .playful-card:nth-child(6) { border-top: 6px solid #ff7d7d; }
+    .playful-card b { display: block; font-size: 26px; margin-bottom: 8px; }
+    .playful-card strong { display: block; color: #12315f; margin-bottom: 6px; }
+    .playful-card span { color: #667085; font-size: 14px; }
+    .playful-closing {
+      margin-top: 26px;
+      padding: 24px 26px;
+      border-radius: 28px;
+      background: linear-gradient(135deg, #ffffff, #eaf7ff);
+      border: 1px solid #d7eafa;
+      color: #40566f;
+    }
+    .playful-closing strong { color: #12315f; display: block; font-size: 20px; margin-bottom: 8px; }
+
+    @media (max-width: 980px) {
+      .playful-hero { grid-template-columns: 1fr; }
+      .playful-grid { grid-template-columns: repeat(2, 1fr); }
+    }
+    @media (max-width: 640px) {
+      .playful-inner { padding: 30px 24px; }
+      .playful-grid { grid-template-columns: 1fr; }
+      .playful h1 { font-size: 31px; }
+    }
+  </style>
+</head>
+<body>
+  <main class="page playful">
+    <section class="playful-inner">
+      <div class="playful-hero">
+        <div>
+          <div class="playful-label">教育事业群人力资源部</div>
+          <h1>组织与干部管理知识库</h1>
+          <p class="playful-lead">面向各二级部门 HRBP 的组织与干部管理工作入口，沉淀规则、流程、模板与实践经验，帮助大家在关键场景中快速查找、准确理解、直接复用。</p>
+        </div>
+        <div class="playful-window">
+          <div class="window-bar"><span></span><span></span><span></span></div>
+          <strong>随手可查，拿来即用</strong>
+          <div class="playful-search">🔎 搜索规则、流程、模板、案例或常见问题</div>
+          <div class="playful-tags"><span>核心规则</span><span>组织管理</span><span>干部管理</span><span>培养发展</span><span>AT 运作</span></div>
+        </div>
+      </div>
+
+      <div class="playful-intro">为更好支持教育事业群各二级部门 HRBP 开展组织与干部相关工作，人力资源部围绕日常高频场景、关键管理动作和标准化操作要求，搭建了本知识库。它不是单纯的资料归档，而是一个面向实际工作的问题入口、操作手册和工具索引，帮助大家在需要推进事项时，更快找到依据、更准把握口径、更顺畅完成落地。</div>
+
+      <h2 class="playful-title">当前内容模块</h2>
+      <div class="playful-grid">
+        <div class="playful-card"><b>📘</b><strong>核心规则和关键举措</strong><span>基础规则、关键机制、年度重点动作及统一口径。</span></div>
+        <div class="playful-card"><b>🧭</b><strong>组织管理</strong><span>组织架构、岗位设置、组织诊断、组织效能。</span></div>
+        <div class="playful-card"><b>👥</b><strong>干部管理全生命周期</strong><span>干部选、用、育、留、汰等关键环节。</span></div>
+        <div class="playful-card"><b>🌱</b><strong>干部培养与发展</strong><span>能力提升、培养项目、发展路径和梯队建设。</span></div>
+        <div class="playful-card"><b>⚙️</b><strong>AT 标准化运作管理</strong><span>AT 会议、议题管理、机制运行和标准动作。</span></div>
+        <div class="playful-card"><b>💬</b><strong>联系我们</strong><span>问题反馈、内容建议和业务咨询。</span></div>
+      </div>
+
+      <div class="playful-closing"><strong>让知识库在使用中持续变好</strong>后续我们会结合 HRBP 的实际需求，持续补充典型案例、操作模板、常见问题和优秀实践。也欢迎大家把一线工作中的高频问题、成熟工具和好做法反馈给我们。</div>
+    </section>
+  </main>
+
+</body>
+</html>
